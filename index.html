@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1>Smart Home: Door Assistant</h1>
+
+    <div class="container">
+        <div class="image">
+            <video hidden=true id="video" width="640" height="480" autoplay></video>
+            <canvas id="mainCanvas" height=240 width=320></canvas>
+            <form onsubmit="return false;">
+            <div class="innerElement">
+              <input type="button" onclick="startVideo()" value="Open camera">
+            </div>
+            </form>
+        </div>
+
+        <div class="wrapper">
+            <div id="speech" onclick="startRecognition()"></div>
+
+            <svg id="mySVG">
+                  <rect id="face" x="20%" y="5%" rx="45" ry="45" width="180" height="140" style="fill:white;stroke:black;stroke-width:4;"></rect>
+                  <circle id="leftEye" cx="33%" cy="40%" r=20 fill="black"> </circle>
+                  <rect id="leftEyeClose" x="27%" y="37%" width="36" height="10" fill="black"></rect>
+                  <circle id="rightEye" cx="67%" cy="40%" r=20 fill="black"></circle>
+                  <rect id="rightEyeClose" x="61%" y="37%" width="36" height="10" fill="black"></rect>
+                  <circle id="leftPupil" cx="100" cy="60" r=8 fill="white"> </circle>
+                  <circle id="rightPupil" cx="202" cy="60" r=8 fill="white"> </circle>
+                  <circle id="leftblush" cx="28%" cy="55%" r=8 fill="pink"> </circle>
+                  <circle id="rightblush" cx="72%" cy="55%" r=8 fill="pink"> </circle>
+                  <line id="upperlip "x1="138" y1="70" x2="162" y2="70" style="stroke:black;stroke-width:3"></line>
+                  <path id="lowerlip" d="M140 70 C 140 80, 160 80, 160 70" stroke="black" fill="transparent" style="stroke:black;stroke-width:3"></path>
+            </svg>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
